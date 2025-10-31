@@ -4,5 +4,6 @@ import br.com.dio.storefront.dto.StockStatusMessage;
 
 public interface IProductChangeAvailabilityConsumer {
 
-    void receive (final StockStatusMessage message);
+    void receive(final StockStatusMessage message);
+
 }

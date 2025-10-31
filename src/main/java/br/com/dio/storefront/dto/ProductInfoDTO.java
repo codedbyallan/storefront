@@ -4,11 +4,8 @@ import java.math.BigDecimal;
 import java.util.UUID;
 
 public record ProductInfoDTO(
-        UUID Id,
+        UUID id,
         String name,
         BigDecimal price
-
-)
-{
-
+) {
 }

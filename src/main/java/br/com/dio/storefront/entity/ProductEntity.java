@@ -1,6 +1,5 @@
 package br.com.dio.storefront.entity;
 
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.Getter;
@@ -14,14 +13,14 @@ import java.util.UUID;
 @Getter
 @Setter
 @ToString
-
 public class ProductEntity {
+
     @Id
     private UUID id;
 
     private String name;
 
-    private boolean active;
+    private Boolean active;
 
     @Override
     public boolean equals(final Object o) {
