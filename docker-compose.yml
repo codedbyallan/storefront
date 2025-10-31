@@ -20,13 +20,12 @@ services:
     command: bash start-dev.sh
     environment:
       SPRING_PROFILES_ACTIVE: dev
-      # debug remoto (IDE) - sua porta externa já está mapeada como 5006
-#      JAVA_TOOL_OPTIONS: -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005  (Removi essa linha por causa de conflito)
     ports:
       - "8081:8081"
       - "5006:5005"
     volumes:
-    - .:/storefront
+      - .:/storefront
+    working_dir: /storefront
     depends_on:
       rabbitmq:
         condition: service_healthy
